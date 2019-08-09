@@ -1,1 +1,19 @@
-/home/amwink/.cambarc
+# File with default values for CamBA
+#
+# You may edit the values, but please don't change
+# the format: "[name] [value]" in the lines below!
+#
+# [name]              = [value]             
+#
+# (comments should start with #)
+#
+####################################################
+#
+DEGREE =  3       
+BOUNDARY =  0       
+EPPI =  10      
+ECPI =  1       
+FWHM =  0.5     
+NRANDOM =  10      
+HRF =  3       
+ARFIT =  3       
