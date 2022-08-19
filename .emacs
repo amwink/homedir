@@ -7,7 +7,7 @@
 ;; in the directory ${HOME}/.emacsfiles
 (setq load-path (cons "~/.emacsfiles" load-path))
 
-(require 'tex-site)
+;; (require 'tex-site) not required if installed via emacs itself
 (require 'ess-site)
 
 (custom-set-variables
@@ -61,10 +61,11 @@
 ;; "9x15" ("-misc-fixed-medium-r-normal--15-140-*-*-c-*-*-1")
 (set-default-font "6x13")
 
-;; use local matlab and html modes
-(autoload 'matlab-mode "~/.emacsfiles/matlab.el" "Enter Matlab mode." t)
-(autoload 'matlab-shell "~/.emacsfiles/matlab.el" "Interactive Matlab mode." t)
+;; use local html 
 (autoload 'html-helper-mode "~/.emacsfiles/html-helper-mode" "Yay HTML" t)
+;; and matlab modes
+(add-to-list 'load-path "~/.emacsfiles/matlab-emacs-src")
+(require 'matlab-load)
 
 ;; this is to load in the correct mode depending upon the filename extension
 (setq auto-mode-alist (mapcar 'purecopy

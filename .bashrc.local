@@ -102,20 +102,13 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 source /usr/share/fsl/5.0/etc/fslconf/fsl.sh
 
 # set FreeSurfer stuff
-export FREESURFER_HOME=/usr/local/bin/freesurfer
+export FREESURFER_HOME=/usr/local/freesurfer/7.2.0
 source $FREESURFER_HOME/FreeSurferEnv.sh
 
 # some more possible ls-aliases
 #alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
-
-# set up FreeSurfer
-# FS is installed in ~amwink/Software/freesurfer
-#    and built in ~amwink/Software/freesurfer/fs_install
-#    which, in turn, is linked to /usr/local/freesurfer
-#export FREESURFER_HOME=/usr/local/freesurfer
-#source ${FREESURFER_HOME}/SetUpFreeSurfer.sh 
 
 # Home-made Alias definitions.
 # You may want to put all your additions into a separate file like

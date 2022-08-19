@@ -14,7 +14,14 @@ alias lssize='ll -Sr'
 alias lstime='ll -tr'
 alias lslen="ls | perl -e 'print sort { length(\$a) <=> length(\$b) } <>'"
 
+# apt aliases
+alias aup='sudo apt update'
+alias afu='sudo apt --purge --autoremove full-upgrade'
+alias arm='sudo apt --purge --autoremove remove'
+alias ain='sudo apt --purge --autoremove install'
+
 # qpdfview for viewing portable document format
+alias qpdfview='masterpdfeditor4 '
 alias qv='qpdfview '
 alias acroread='qpdfview '
 
@@ -30,7 +37,7 @@ alias startvncserver='vncserver :9${HOSTNAME##*0} -name "${HOSTNAME}-${USER}" -g
 alias killvncserver='vncserver -kill :9${HOSTNAME##*0}'
 
 # aliases related to matlab and R
-alias matlabshell='/usr/local/MATLAB/R2018a/bin/matlab -nodesktop -nosplash'
+alias matlabshell='/usr/local/matlab/r2018a/bin/matlab -nodesktop -nosplash'
 alias matlab='matlabshell;stty echo'
 alias R='/usr/bin/R --no-save'
 
@@ -49,6 +56,9 @@ alias vnc04='vncviewer 10.144.40.48:94'
 # aliases related to Cambridge
 alias bcni='ssh -L5903:bcni3:5923 amw71@bcni.psychol.cam.ac.uk'
 alias camvnc='vncviewer :03' 
+
+# alias for the dev1 computer in the research cloud
+alias radt='ssh amwink@rng-img-dev1'
 
 # aliases related to the file system
 alias anna='cd /anna/users/${USER}${PWD##*${USER}}'
@@ -78,3 +88,10 @@ alias gpuhost="ssh amwink@10.119.24.104"
 # aliases for the deep learning servers
 alias dl1="ssh amwink@10.120.4.222"
 alias dl2="ssh amwink@10.120.6.238"
+
+# sync home dir with lnx-rad-04
+alias synchome='time rsync -T /tmp -rRulpogtmzhv . amwink@lnx-rad-04:/home/projects/AD_Niftis/work/amwink/oldhome'
+
+# sync home dir with usb disc
+alias synchomeUSB='time rsync -T /tmp -rRulpogtmzhv . /mnt/usb/amwink'
+
